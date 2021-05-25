@@ -13,37 +13,58 @@
     `type: logic` - sortList(); each sorting option(old->new, new->old, a->z, z->a, short->long, long->short)
 
     `type: handlers` - reads the input and uses the input and data to create a new list
+    
     `type: procedures` - displays items on teh screen
+    
     `type: listeners` - yes, 'click' -> call sortList();
+    
     `type: init`
+    
     `type: data`
 
 3. Given 'add' and 'remove' buttons.
     
     `type: logic` - addOrRemove() or main function
+    
     `type: handlers` - buttons add/remove that work on click
+    
     `type: procedures` - 
+    
     `type: listeners` - yes, 'click'
+    
     `type: init`
+    
     `type: data`
 
 4. Given field to type in a word.
  
     `type: logic` - takes the word, puts into array
+    
     `type: handlers` - reads and uses the input and data to create a  list
+    
     `type: procedures` - reads a given word;
+    
     `type: listeners` - yes, 'keyup' - typing;
+    
     `type: init`
+    
     `type: data`
 
 5. Given: created list is displayed on the screen.
     `type: css` - 
+    
     `type: html`
+    
     `type: logic` 
+    
     `type: handlers` - reads the input and uses the input and data to create a list
+    
     `type: procedures` - displays item on the UI
+    
     `type: listeners`
+    
     `type: init`
+    
     `type: data`
 ## Should Have's
 1. 
