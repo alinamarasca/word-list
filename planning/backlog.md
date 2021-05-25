@@ -2,7 +2,7 @@
 
 1. As a **visitor** I want to know what this app/site does.
    
-Given: a description what it does.
+    Given: a description what it does.
 
 1. As a **person who makes a list** I want to have options how to sort my list.
    
