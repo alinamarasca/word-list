@@ -14,7 +14,7 @@
 
     `type: handlers` - reads the input and uses the input and data to create a new list
     
-    `type: procedures` - displays items on teh screen
+    `type: procedures` - displays items on the screen
     
     `type: listeners` - yes, 'click' -> call sortList();
     
@@ -51,6 +51,7 @@
     `type: data`
 
 5. Given: created list is displayed on the screen.
+   
     `type: css` - 
     
     `type: html`
@@ -60,6 +61,24 @@
     `type: handlers` - reads the input and uses the input and data to create a list
     
     `type: procedures` - displays item on the UI
+    
+    `type: listeners`
+    
+    `type: init`
+    
+    `type: data`
+
+5. Given: if the input contains non-letters, it will not be added and a warning will be displayed.
+   
+    `type: css`
+    
+    `type: html`
+    
+    `type: logic`
+    
+    `type: handlers`
+    
+    `type: procedures`
     
     `type: listeners`
     

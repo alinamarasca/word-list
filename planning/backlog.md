@@ -18,6 +18,11 @@
 4. As a**person who makes a list** I want to dee my list on the screen.
    
    Given: given items displayed on teh screen.
+
+5. As a **stackholder** I allow only words list.
+    Given: if the input contains non-letters, it will not be added and a warning will be displayed.
+
+
 ## Should Have's
 1. As a **visitor** I want the app/site to be nice.
     
