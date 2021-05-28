@@ -13,11 +13,10 @@
  * if the sortType is not one of these 6 options, a copy of toSort is returned
  * @returns {string[]} a new sorted array containing the same strings as toSort
  */
- export const sortStrings = (toSort = [], sortType = '') => {
+ export const sortStrings = ( toSort = [], sortType = '') => {
   let copyToSort = [...toSort];
  if (sortType === 'oldest'){
-   console.log('hello')
-   return copyToSort;
+ return copyToSort;
  }
 if (sortType === 'newest'){
     return copyToSort.reverse();

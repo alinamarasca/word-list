@@ -1,9 +1,9 @@
-import { data } from '../data.js';
-import { isWord } from '../logic/is-word.js';
-import { sortStrings } from '../logic/sort-strings.js';
-import { updateList } from '../procedures/update-list.js';
+import { data } from "../data.js";
+import { isWord } from "../logic/is-word.js";
+import { sortStrings } from "../logic/sort-strings.js";
+import { updateList } from "../procedures/update-list.js";
 
-const warnings = document.getElementById('warnings');
+const warnings = document.getElementById("warnings");
 
 /**
  * Entry point for users adding a word to the list.
@@ -14,16 +14,48 @@ const warnings = document.getElementById('warnings');
 export const handleInputWord = (event) => {
   /* -- entry point for adding or removing a word -- */
   // debugger;
-  console.log('-- handler: input word --');
+  console.log("-- handler: input word --");
 
   /* -- check the target -- */
-  if (event.target.type !== 'button') {
+  if (event.target.type !== "button") {
     return;
   }
 
   /* -- gather user input from DOM -- */
-  const text = event.target.form.text.value;
-  const action = event.target.value;
+  const text = event.target.form.text.value; // input field
+  const action = event.target.value; // add or remove button
+
+  if (action === "add") {
+      if (!isWord(text)) {
+      // write into innerHTML the message
+      const thyWarning = document.getElementById("warnings");
+      thyWarning.textContent = `"${text}" is not a word!`;
+      thyWarning.style.color = "red";
+      console.log(`${text} is not a word!`);
+    } else {
+      console.log("adding to the list");
+      data.words.push(text);
+      console.log(data);
+    }
+  } // else{
+  if (action === "remove") {
+    // 1-word is in the list -> remove; 2- word is not in the list- warning
+    if (data.words.includes(text)) {
+      // in the list DELETE
+      console.log("i will delete");
+      const index = data.words.indexOf(text);
+      if (index > -1) {
+        // HERE!!!
+        data.words.splice(index, 1);
+        console.log(data);
+      }
+    } else {
+      const thyWarning = document.getElementById("warnings");
+      thyWarning.textContent = `"${text}" is not in the list!`;
+      thyWarning.style.color = "red";
+      console.log(`${text} is not in the list`);
+    }
+  }
 
   /* -- use the input and data to implement the user story --
 
