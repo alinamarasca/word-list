@@ -24,11 +24,13 @@ export const handleInputWord = (event) => {
   /* -- gather user input from DOM -- */
   const text = event.target.form.text.value; // input field
   const action = event.target.value; // add or remove button
+  const thyWarning = document.getElementById("warnings");
 
   if (action === "add") {
+      thyWarning.textContent = ``;
       if (!isWord(text)) {
       // write into innerHTML the message
-      const thyWarning = document.getElementById("warnings");
+      // const thyWarning = document.getElementById("warnings");
       thyWarning.textContent = `"${text}" is not a word!`;
       thyWarning.style.color = "red";
       console.log(`${text} is not a word!`);
@@ -39,6 +41,7 @@ export const handleInputWord = (event) => {
     }
   } // else{
   if (action === "remove") {
+    thyWarning.textContent = ``;
     // 1-word is in the list -> remove; 2- word is not in the list- warning
     if (data.words.includes(text)) {
       // in the list DELETE
@@ -50,7 +53,7 @@ export const handleInputWord = (event) => {
         console.log(data);
       }
     } else {
-      const thyWarning = document.getElementById("warnings");
+      
       thyWarning.textContent = `"${text}" is not in the list!`;
       thyWarning.style.color = "red";
       console.log(`${text} is not in the list`);

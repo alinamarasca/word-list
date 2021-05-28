@@ -8,15 +8,22 @@
   </head>
 
   <body>
+    <header>
+      <h1>Here you can create a list of words and sort them.</h1>
+    </header>
     <div id="root">
-      <form id="input-form"> <!--form is content-->
+      <div class = 'content'>
+        <form id="input-form"> <!--form is content-->
+        <div class = 'input-field'>
         <input name="text" placeholder="new word" />
-        <input type="button" value="add" />
-        <input type="button" value="remove" />
-      </form>
-      <code id="warnings" class="warning"></code>
-      <br />
-      sort:
+        <code id="warnings" class="warning"></code>
+        </div>
+        <input class = 'btn' type="button" id = 'add' value="add" />
+        <input class = 'btn' type="button" id = 'remove' value="remove" />
+         </form>
+      
+      <br/>
+        <!--sort:-->
       <select id="sort-type"><!--dropdown menu-->
         <option value="oldest">old -> new</option>
         <option value="newest">new -> old</option>
@@ -25,6 +32,7 @@
         <option value="shortest">short -> long</option>
         <option value="longest">long -> short</option>
       </select>
+    </div>
       <div id="list-container"></div><!--there go our words-->
     </div>
 
